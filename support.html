@@ -55,10 +55,6 @@
   .contact h2 { margin-top: 0; }
   .contact p:last-child { margin-bottom: 0; }
   .email { display: inline-block; font: 500 26px/1.2 var(--serif); margin: 4px 0 12px; }
-  /* Adres yazılana kadar bağlantı gizlenir, yerine bekleme notu görünür. */
-  .email[href="mailto:"] { display: none; }
-  .email-pending { display: none; color: var(--bone-soft); margin: 4px 0 12px; }
-  .email[href="mailto:"] + .email-pending { display: block; }
 
   footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--ash); font-size: 14px; color: var(--bone-soft); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
   footer nav { display: flex; gap: 20px; }
@@ -83,13 +79,7 @@
 
   <section class="contact" aria-labelledby="contact">
     <h2 id="contact">Contact</h2>
-    <!--
-      DESTEK E-POSTASI: aşağıdaki satırda adresi İKİ yere yazın (href ve görünen metin), örn.
-      <a class="email" href="mailto:hello@ornek.com">hello@ornek.com</a>
-      Adres yazılmadığı sürece sayfada "being set up" notu görünür.
-    -->
-    <a class="email" href="mailto:"></a>
-    <p class="email-pending">A support email address is being set up and will be listed here.</p>
+    <a class="email" href="mailto:alican.turfan@outlook.com?subject=Slowburn">alican.turfan@outlook.com</a>
     <p>For anything about a charge or a refund, Apple can help you directly at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
   </section>
 
