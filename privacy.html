@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Slowburn · Privacy Policy</title>
+<meta name="description" content="Slowburn collects no data: no accounts, no servers, no analytics. Everything stays on your iPhone.">
+<style>
+  :root {
+    --ink: #0B0908;
+    --soot: #15110F;
+    --ash: #2A2320;
+    --bone: #EDE6DA;
+    --bone-soft: rgba(237, 230, 218, 0.72);
+    --flame: #D9541E;
+    --serif: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--bone);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Alttaki kor ışığı: sabit bir katman olarak çizilir (iOS Safari sabit arka planı desteklemez). */
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background: radial-gradient(120% 60% at 50% 100%, rgba(140, 28, 19, 0.20), transparent 70%);
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 24px 88px; }
+  .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 64px; text-decoration: none; color: var(--bone); }
+  .mark {
+    width: 44px; height: 44px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: radial-gradient(circle at 38% 32%, #8C1C13, #4A0E12);
+    font: italic 500 24px/1 var(--serif); color: rgba(237, 230, 218, 0.92);
+  }
+  .brand span { font: 500 26px/1 var(--serif); letter-spacing: 0.01em; }
+  h1 { font: 500 46px/1.08 var(--serif); letter-spacing: -0.01em; margin: 0 0 10px; }
+  .lead { font: italic 400 22px/1.4 var(--serif); color: var(--bone-soft); margin: 0 0 36px; }
+  .facts { list-style: none; margin: 0 0 12px; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+  .facts li {
+    border: 1px solid var(--ash); border-radius: 999px; padding: 7px 14px;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bone-soft);
+  }
+  h2 { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--flame); margin: 40px 0 10px; }
+  p { margin: 0 0 12px; color: rgba(237, 230, 218, 0.88); }
+  a { color: var(--bone); text-decoration-color: var(--flame); text-underline-offset: 3px; overflow-wrap: anywhere; }
+  a:hover { color: var(--flame); }
+  footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--ash); font-size: 14px; color: var(--bone-soft); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+  footer nav { display: flex; gap: 20px; }
+  @media (max-width: 480px) {
+    main { padding: 40px 20px 72px; }
+    .brand { margin-bottom: 48px; }
+    h1 { font-size: 38px; }
+    .lead { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="brand" href="support.html" aria-label="Slowburn support">
+    <div class="mark" aria-hidden="true">S</div>
+    <span>Slowburn</span>
+  </a>
+
+  <h1>Privacy Policy</h1>
+  <p class="lead">Slowburn is built to stay between the two of you.</p>
+
+  <ul class="facts" aria-label="Summary">
+    <li>No accounts</li>
+    <li>No servers</li>
+    <li>No tracking</li>
+    <li>No data collected</li>
+  </ul>
+
+  <h2>What we collect</h2>
+  <p>Nothing. Slowburn has no accounts, no servers and no analytics. It contains no advertising and no third-party SDKs, and it makes no network requests of its own. We do not collect, store or share personal information.</p>
+
+  <h2>What stays on your device</h2>
+  <p>A few settings are kept in the app's own storage on your device (UserDefaults): which cards you have already seen, your age confirmation and whether the app lock is turned on. They never leave your device and are erased when you delete the app. Answers given in Mutual Yes are never saved; they are discarded as soon as the round ends.</p>
+
+  <h2>Face ID and Touch ID</h2>
+  <p>The optional app lock uses Apple's LocalAuthentication framework. iOS performs the Face ID, Touch ID or passcode check and tells the app only whether it succeeded. Slowburn never receives, stores or has access to your biometric data.</p>
+
+  <h2>Purchases</h2>
+  <p>Subscriptions and purchases are processed by Apple through StoreKit and your Apple Account. We never receive your name, email address or payment details. Whether a level is unlocked is checked on your device from the purchase records Apple provides.</p>
+
+  <h2>Reminders and invitations</h2>
+  <p>The Friday reminder is a local notification scheduled on your device; no push service is involved. An invitation leaves your device only when you choose to send it, through the iOS share sheet, to the app you pick.</p>
+
+  <h2>Age</h2>
+  <p>Slowburn is intended only for adults aged 18 and over. It is not directed at children.</p>
+
+  <h2>Changes and contact</h2>
+  <p>If this policy changes, the updated version will be published at <a href="https://alicanturfan.github.io/slowburn/privacy.html">https://alicanturfan.github.io/slowburn/privacy.html</a> and in the app. Questions are answered through the support page at <a href="https://alicanturfan.github.io/slowburn/support.html">https://alicanturfan.github.io/slowburn/support.html</a>.</p>
+
+  <footer>
+    <span>Last updated: November 26, 2026</span>
+    <nav>
+      <a href="support.html">Support</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>

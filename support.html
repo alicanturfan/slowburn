@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Slowburn · Support</title>
+<meta name="description" content="Help with Slowburn: contact, cancelling a subscription, restoring purchases and the Face ID lock.">
+<style>
+  :root {
+    --ink: #0B0908;
+    --soot: #15110F;
+    --ash: #2A2320;
+    --bone: #EDE6DA;
+    --bone-soft: rgba(237, 230, 218, 0.72);
+    --flame: #D9541E;
+    --serif: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--ink);
+    color: var(--bone);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Alttaki kor ışığı: sabit bir katman olarak çizilir (iOS Safari sabit arka planı desteklemez). */
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background: radial-gradient(120% 60% at 50% 100%, rgba(140, 28, 19, 0.20), transparent 70%);
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 24px 88px; }
+  .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 64px; text-decoration: none; color: var(--bone); }
+  .mark {
+    width: 44px; height: 44px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: radial-gradient(circle at 38% 32%, #8C1C13, #4A0E12);
+    font: italic 500 24px/1 var(--serif); color: rgba(237, 230, 218, 0.92);
+  }
+  .brand span { font: 500 26px/1 var(--serif); letter-spacing: 0.01em; }
+  h1 { font: 500 46px/1.08 var(--serif); letter-spacing: -0.01em; margin: 0 0 10px; }
+  .lead { font: italic 400 22px/1.4 var(--serif); color: var(--bone-soft); margin: 0 0 36px; }
+  h2 { font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--flame); margin: 40px 0 10px; }
+  p { margin: 0 0 12px; color: rgba(237, 230, 218, 0.88); }
+  ol, ul { margin: 0 0 12px; padding-left: 22px; color: rgba(237, 230, 218, 0.88); }
+  li { margin: 0 0 6px; padding-left: 4px; }
+  li::marker { color: var(--flame); }
+  a { color: var(--bone); text-decoration-color: var(--flame); text-underline-offset: 3px; overflow-wrap: anywhere; }
+  a:hover { color: var(--flame); }
+  strong { font-weight: 600; color: var(--bone); }
+
+  .contact { background: var(--soot); border: 1px solid var(--ash); border-radius: 20px; padding: 24px; margin: 0 0 8px; }
+  .contact h2 { margin-top: 0; }
+  .contact p:last-child { margin-bottom: 0; }
+  .email { display: inline-block; font: 500 26px/1.2 var(--serif); margin: 4px 0 12px; }
+  /* Adres yazılana kadar bağlantı gizlenir, yerine bekleme notu görünür. */
+  .email[href="mailto:"] { display: none; }
+  .email-pending { display: none; color: var(--bone-soft); margin: 4px 0 12px; }
+  .email[href="mailto:"] + .email-pending { display: block; }
+
+  footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--ash); font-size: 14px; color: var(--bone-soft); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+  footer nav { display: flex; gap: 20px; }
+  @media (max-width: 480px) {
+    main { padding: 40px 20px 72px; }
+    .brand { margin-bottom: 48px; }
+    h1 { font-size: 38px; }
+    .lead { font-size: 20px; }
+    .email { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <a class="brand" href="support.html" aria-label="Slowburn support">
+    <div class="mark" aria-hidden="true">S</div>
+    <span>Slowburn</span>
+  </a>
+
+  <h1>Support</h1>
+  <p class="lead">Help with Slowburn, the card game for two.</p>
+
+  <section class="contact" aria-labelledby="contact">
+    <h2 id="contact">Contact</h2>
+    <!--
+      DESTEK E-POSTASI: aşağıdaki satırda adresi İKİ yere yazın (href ve görünen metin), örn.
+      <a class="email" href="mailto:hello@ornek.com">hello@ornek.com</a>
+      Adres yazılmadığı sürece sayfada "being set up" notu görünür.
+    -->
+    <a class="email" href="mailto:"></a>
+    <p class="email-pending">A support email address is being set up and will be listed here.</p>
+    <p>For anything about a charge or a refund, Apple can help you directly at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+  </section>
+
+  <h2>Cancel a subscription</h2>
+  <p>Subscriptions are billed and managed by Apple, so they are cancelled in your Apple Account, not inside the game.</p>
+  <ol>
+    <li>Open the <strong>Settings</strong> app on your iPhone.</li>
+    <li>Tap your name, then <strong>Subscriptions</strong>.</li>
+    <li>Choose <strong>Slowburn</strong> and tap <strong>Cancel Subscription</strong>.</li>
+  </ol>
+  <p>If you are subscribed, the same page opens from inside Slowburn: tap the gear on the first screen, then <strong>Manage Subscription</strong>. You keep access until the end of the period you have already paid for. Deleting the app does not cancel a subscription.</p>
+
+  <h2>Restore purchases</h2>
+  <p>Tap the gear on the first screen of Slowburn and choose <strong>Restore Purchases</strong>. The same button is on the screen that offers the subscription. Make sure the iPhone is signed in to the Apple Account you bought with; a subscription or a Level 3 purchase comes back on any iPhone using that account.</p>
+  <p>If you paid but a level is still locked, Restore Purchases fixes it in most cases. A purchase that is waiting for approval (Ask to Buy) unlocks by itself once it is approved.</p>
+
+  <h2>Refunds</h2>
+  <p>Refunds are decided by Apple. Go to <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>, sign in and choose the purchase.</p>
+
+  <h2>Face ID lock</h2>
+  <p>The lock is optional and off by default. To turn it on, tap the gear on the first screen and switch on <strong>Require Face ID</strong> (Require Touch ID on an iPhone with a Home button).</p>
+  <ul>
+    <li>Slowburn then asks every time it is opened or brought back from the background.</li>
+    <li>With the lock on, its preview in the app switcher is hidden.</li>
+    <li>If Face ID does not recognise you, iOS offers your device passcode instead.</li>
+    <li>Turning the lock off again asks for Face ID or your passcode once more.</li>
+  </ul>
+  <p>The check is done by iOS. Slowburn never sees your face or fingerprint data, and we cannot unlock the app for you. If you are ever locked out, deleting and reinstalling Slowburn turns the lock off; Restore Purchases then brings your purchases back.</p>
+
+  <h2>Friday reminder</h2>
+  <p>The reminder is a notification created on your own iPhone. Turn it on or off in Slowburn: tap the gear on the first screen, then <strong>Friday reminder</strong>. It says only: Your night is waiting.</p>
+
+  <h2>Free and paid levels</h2>
+  <p>Levels 1 and 2 are free. A weekly or yearly subscription unlocks Levels 3 to 5 and Mutual Yes. Level 3 can also be unlocked on its own with a one-time purchase. Prices are shown in the app before you confirm.</p>
+
+  <h2>Privacy</h2>
+  <p>Slowburn collects no data. Read the <a href="privacy.html">privacy policy</a>.</p>
+
+  <footer>
+    <span>Slowburn is for adults aged 18 and over.</span>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
+    </nav>
+  </footer>
+</main>
+</body>
+</html>
